@@ -1,0 +1,135 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.13em;
+  margin: 0 0 25px;
+}
+.eyebrow > span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: var(--orange);
+  transform: skewX(-15deg);
+  flex-shrink: 0;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 29px;
+  background: var(--orange);
+  color: var(--ink);
+  min-height: 54px;
+  padding: 16px 23px;
+  border: 1px solid var(--orange);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  transition:
+    background 0.18s,
+    transform 0.18s;
+}
+.button:hover {
+  background: #ff805c;
+  border-color: #ff805c;
+  transform: translateY(-2px);
+}
+.button .icon {
+  width: 18px;
+  height: 18px;
+}
+.button.small {
+  min-height: 45px;
+  font-size: 11px;
+  padding: 12px 17px;
+  gap: 19px;
+}
+.button.dark {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+.button.dark:hover {
+  background: #303a34;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  background: none;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.18s;
+}
+.text-link:hover {
+  border-color: currentColor;
+}
+.text-link .icon {
+  width: 19px;
+  height: 19px;
+}
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  left: 15px;
+  top: -100px;
+  background: var(--orange);
+  color: var(--ink);
+  padding: 15px;
+}
+.skip-link:focus {
+  top: 15px;
+}
+.simple-list {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 28px;
+}
+.simple-list > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.simple-list .icon {
+  color: #7f9472;
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+}
+@media (max-width: 950px) {
+  .button.small {
+    font-size: 10px;
+    gap: 15px;
+    padding: 11px 14px;
+  }
+  .simple-list > li {
+    font-size: 11px;
+  }
+}
+@media (max-width: 700px) {
+  .eyebrow {
+    font-size: 7px;
+    margin-bottom: 21px;
+    letter-spacing: 0.11em;
+    gap: 8px;
+  }
+  .simple-list > li {
+    font-size: 12px;
+    line-height: 1.9;
+    gap: 12px;
+  }
+  .simple-list {
+    gap: 11px;
+    margin: 20px 0 23px;
+  }
+}

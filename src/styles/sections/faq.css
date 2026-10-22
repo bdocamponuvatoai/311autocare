@@ -1,0 +1,101 @@
+.faq-section {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 90px;
+  padding-top: 90px;
+  padding-bottom: 95px;
+}
+.faq-section > div:first-child > .text-link {
+  margin-top: 30px;
+}
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+.faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+  padding: 25px 0;
+}
+.faq-list details:first-child summary {
+  padding-top: 0;
+}
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+.faq-list summary > span {
+  width: 13px;
+  height: 13px;
+  position: relative;
+  flex-shrink: 0;
+}
+.faq-list summary > span:before,
+.faq-list summary > span:after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  background: var(--ink);
+  top: 6px;
+  left: 1px;
+}
+.faq-list summary > span:after {
+  transform: rotate(90deg);
+}
+.faq-list details[open] summary > span:after {
+  transform: rotate(0);
+}
+.faq-list details > p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 450px;
+  margin: 0 25px 24px 0;
+}
+@media (max-width: 950px) {
+  .faq-section {
+    gap: 55px;
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
+  .faq-section h2 {
+    font-size: 39px;
+  }
+  .faq-list summary {
+    font-size: 12px;
+  }
+  .faq-list details > p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 700px) {
+  .faq-section {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 58px;
+    padding-bottom: 60px;
+  }
+  .faq-section h2 {
+    font-size: 39px;
+  }
+  .faq-section > div:first-child > .text-link {
+    margin-top: 24px;
+    font-size: 11px;
+  }
+  .faq-list summary {
+    font-size: 12px;
+    padding: 22px 0;
+    gap: 20px;
+  }
+  .faq-list details > p {
+    font-size: 12px;
+    line-height: 1.9;
+    margin-right: 15px;
+  }
+}

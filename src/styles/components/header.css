@@ -1,0 +1,255 @@
+.topline {
+  background: var(--dark);
+  color: #d4d9d3;
+  height: 34px;
+}
+.topline > .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.09em;
+}
+.topline span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.topline i {
+  width: 5px;
+  height: 5px;
+  background: var(--orange);
+  border-radius: 50%;
+}
+.topline a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  letter-spacing: 0.03em;
+}
+.topline .icon {
+  width: 12px;
+  height: 12px;
+}
+.site-header {
+  height: 90px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #f5f4eff5;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #181d1b10;
+}
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+.brand-number {
+  position: relative;
+  font-family: var(--font);
+  font-size: 47px;
+  line-height: 1;
+  letter-spacing: -0.095em;
+  font-weight: 800;
+  font-style: italic;
+  display: block;
+  padding-right: 10px;
+}
+.brand-slash {
+  position: absolute;
+  right: -4px;
+  top: 8px;
+  width: 5px;
+  height: 35px;
+  background: var(--orange);
+  transform: skewX(-15deg);
+}
+.brand-words {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding-top: 3px;
+}
+.brand-words small {
+  display: block;
+  font-size: 5px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-top: 7px;
+}
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 11px;
+  font-weight: 500;
+}
+.desktop-nav a {
+  padding: 15px 0;
+  position: relative;
+}
+.desktop-nav a:after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 0;
+  background: var(--orange);
+  height: 2px;
+  transition: width 0.2s;
+}
+.desktop-nav a:hover:after,
+.desktop-nav a[aria-current]:after {
+  width: 100%;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.nav-phone .icon {
+  width: 16px;
+  height: 16px;
+}
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+}
+.menu-toggle > span {
+  height: 1px;
+  display: block;
+  background: var(--ink);
+  margin: 7px 0;
+  width: 23px;
+}
+#mobile-nav {
+  background: var(--paper);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 20px 26px 30px;
+  box-shadow: 0 30px 40px #0002;
+  border-top: 1px solid var(--line);
+}
+#mobile-nav > a:not(.button) {
+  display: block;
+  padding: 13px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+#mobile-nav .button {
+  width: 100%;
+  margin: 15px 0 5px;
+}
+#mobile-nav a.mobile-phone {
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .nav-phone > span {
+    display: none;
+  }
+  .nav-phone .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .nav-actions {
+    gap: 18px;
+  }
+  .desktop-nav {
+    gap: 25px;
+  }
+}
+@media (max-width: 950px) {
+  .site-header {
+    height: 82px;
+  }
+  .brand-number {
+    font-size: 41px;
+  }
+  .brand-slash {
+    height: 30px;
+    top: 7px;
+  }
+  .brand-words {
+    font-size: 9px;
+  }
+  .brand-words small {
+    font-size: 4px;
+  }
+  .brand {
+    gap: 13px;
+  }
+  .nav-inner {
+    gap: 20px;
+  }
+  .desktop-nav {
+    font-size: 9px;
+    gap: 18px;
+  }
+  .nav-phone {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .topline {
+    height: 29px;
+  }
+  .topline > .container {
+    justify-content: center;
+    font-size: 7px;
+    letter-spacing: 0.09em;
+  }
+  .topline a {
+    display: none;
+  }
+  .site-header {
+    height: 77px;
+  }
+  .nav-inner {
+    gap: 15px;
+  }
+  .brand-number {
+    font-size: 41px;
+  }
+  .brand-words {
+    font-size: 9px;
+  }
+  .brand-words small {
+    font-size: 4px;
+  }
+  .desktop-nav,
+  .nav-actions > .button {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-actions {
+    gap: 0;
+  }
+}

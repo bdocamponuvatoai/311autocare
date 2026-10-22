@@ -1,0 +1,131 @@
+.closing {
+  background: var(--orange);
+  padding: 68px 0;
+  overflow: hidden;
+}
+.closing-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 100px;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+}
+.closing .eyebrow {
+  font-size: 8px;
+  letter-spacing: 0.15em;
+}
+.closing .eyebrow > span {
+  background: var(--ink);
+}
+.closing h2 {
+  font-size: 76px;
+  line-height: 1;
+  letter-spacing: -0.075em;
+}
+.closing h2 em {
+  color: var(--ink);
+}
+.closing-grid > div:nth-child(2) {
+  z-index: 1;
+}
+.closing-grid > div > p:not(.eyebrow) {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 25px;
+  max-width: 300px;
+}
+.closing .button {
+  font-size: 11px;
+  min-width: 235px;
+}
+.closing-phone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.closing-phone .icon {
+  width: 14px;
+  height: 14px;
+}
+.closing-stripes {
+  position: absolute;
+  z-index: -1;
+  right: -250px;
+  top: -80px;
+  bottom: -100px;
+  display: flex;
+  gap: 25px;
+  transform: skewX(-20deg);
+  opacity: 0.23;
+}
+.closing-stripes > i {
+  display: block;
+  height: 100%;
+  width: 70px;
+  background: #ffae80;
+}
+@media (max-width: 950px) {
+  .closing {
+    padding: 55px 0;
+  }
+  .closing-grid {
+    gap: 70px;
+  }
+  .closing h2 {
+    font-size: 64px;
+  }
+  .closing-grid > div > p:not(.eyebrow) {
+    font-size: 12px;
+  }
+  .closing .button {
+    font-size: 10px;
+    min-width: 210px;
+    gap: 20px;
+  }
+  .closing-phone {
+    font-size: 9px;
+  }
+}
+@media (max-width: 700px) {
+  .closing {
+    padding: 50px 0;
+  }
+  .closing-grid {
+    grid-template-columns: 1fr;
+    gap: 29px;
+  }
+  .closing .eyebrow {
+    font-size: 7px;
+    margin-bottom: 23px;
+  }
+  .closing h2 {
+    font-size: 64px;
+  }
+  .closing-grid > div > p:not(.eyebrow) {
+    font-size: 12px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+  .closing .button {
+    font-size: 11px;
+    min-width: 230px;
+    min-height: 51px;
+  }
+  .closing-phone {
+    font-size: 10px;
+    margin-top: 21px;
+  }
+  .closing-stripes {
+    right: -220px;
+    gap: 20px;
+    top: -70px;
+    bottom: -80px;
+  }
+  .closing-stripes > i {
+    width: 60px;
+  }
+}
